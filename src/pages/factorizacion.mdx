@@ -1,0 +1,21 @@
+import Layout from '../layouts/Layout.astro';
+import { MathBlock } from '../components/MathBlock';
+import { GeoGebra } from '../components/GeoGebra';
+
+<Layout title="Factorización">
+
+# Factorización de Polinomios
+
+Para factorizar un polinomio de grado 2, como <MathBlock formula="P(x) = x^2 - 5x + 6" />, lo más directo es realizar una descomposición típica buscando sus raíces.
+
+Si igualamos a cero, <MathBlock formula="x^2 - 5x + 6 = 0" />, encontramos que las raíces son <MathBlock formula="x_1 = 2" /> y <MathBlock formula="x_2 = 3" />.
+
+Por lo tanto, la forma factorizada queda expresada de la siguiente manera:
+
+<MathBlock block={true} formula="P(x) = (x - 2)(x - 3)" />
+
+Podemos verificar visualmente estas raíces observando dónde la función intersecta el eje horizontal:
+
+<GeoGebra ecuacion="x^2 - 5x + 6" client:visible />
+
+</Layout>
